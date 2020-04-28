@@ -1,0 +1,101 @@
+$primary : #FF404E;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  background-origin: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  top: 15%;
+}
+
+.sidebar {
+  max-width: 300px;
+  margin-left: 14%;
+  margin-right: 7%;
+  text-align: center;
+
+  img {
+    margin-bottom: 2em;
+  }
+
+  nav {
+    display: block;
+    text-align: left;
+    margin-top: 6em;
+    li {
+      list-style: none;
+      font-family: 'Space Mono', monospace;
+    }
+  }
+}
+
+.main {
+  width: 50%;
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 5vw);
+    grid-gap: 15px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-img1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.gallery-img2 {
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+
+}
+
+.topRedBar, .bottomRedBar {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  background-color: $primary;
+  z-index: 10;
+}
+
+.bottomRedBar {
+  bottom: 0;
+}
+
+h1, h2, h3 {font-family: 'Poppins', sans-serif;}
+
+h1 {font-size: 1.95em;}
+
+h2 {
+  color: $primary; 
+  font-size: 1.95em;
+  margin-bottom: 1.2em;
+}
+
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  color: $primary;
+}
+
+a {color: $primary;}
