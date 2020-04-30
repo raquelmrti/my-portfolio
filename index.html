@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raquel Martínez</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+
+ <body>
   <div class="red-bar-top"></div>
 
   <div class="container">
+   <!------------------ Header/Sidebar ------------------>
 
-      <div class="sidebar">
+   <div class="header-wrapper">
+    <div class="header">
+     <img src="img/icon.png" alt="Icono de Raquel" />
+     <h1>Raquel Martínez</h1>
+     <h3>Diseñadora gráfica</h3>
 
-        <img src="img/icon.png" alt="Icono de Raquel">
-        <h1>Raquel Martínez</h1>
-        <h3>Diseñadora gráfica</h3>
-
-        <nav>
-          <ul>
-            <li>Mis trabajos</li>
-            <a href="sobre-mi.html"><li>Sobre mí</li></a>
-          </ul>
-        </nav>
-
-      </div>
-
-    <div class="main">
-      <h2>Mis trabajos</h2>
-
-      <div class="grid-gallery">
-        <figure class="gallery__img--1">
-          <a href=""><img src="img/thumbnails/thumb-img1.png" alt=""></a>
-        </figure>
-
-        <figure class="gallery__img--2">
-          <a href=""><img src="img/thumbnails/thumb-img2.png" alt=""></a>
-        </figure>
-
-        <figure class="gallery__img--3">
-          <a href=""><img src="img/thumbnails/thumb-img3.png" alt=""></a>
-        </figure>
-
-        <figure class="gallery__img--4">
-          <a href=""><img src="img/thumbnails/thumb-img4.png" alt=""></a>
-        </figure>
-      </div>
+     <nav>
+      <ul>
+       <li>Mis trabajos</li>
+       <li><a href="sobre-mi.html">Sobre mí</a></li>
+      </ul>
+     </nav>
     </div>
+   </div>
+
+   <!------------------ Main ------------------>
+
+   <div class="main">
+    <h2>Mis trabajos</h2>
+
+    <div class="grid-gallery">
+
+      <figure class="gallery__img--1">
+        <img src="img/thumbnails/thumb-img1.png" alt="" />
+        <a href=""><div class="project-title-overlay">
+         <p class="project-title-overlay-text">Tarjeta de visita</p>
+        </div></a>
+       </figure>
+
+     <figure class="gallery__img--2">
+      <img src="img/thumbnails/thumb-img2.png" alt="" />
+      <a href=""><div class="project-title-overlay">
+       <p class="project-title-overlay-text">Gráficas para RRSS</p>
+      </div></a>
+     </figure>
+
+     <figure class="gallery__img--3">
+      <img src="img/thumbnails/thumb-img3.png" alt="" />
+      <a href=""><div class="project-title-overlay">
+       <p class="project-title-overlay-text">Gráficas Islandia</p>
+      </div></a>
+     </figure>
+
+     <figure class="gallery__img--4">
+      <a href=""><img src="img/thumbnails/thumb-img4.png" alt="" /></a>
+     </figure>
+    </div>
+   </div>
   </div>
 
   <div class="red-bar-bottom"></div>
-</body>
+ </body>
 </html>
