@@ -10,6 +10,11 @@ monospace;
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #ff404d83;
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -153,6 +158,42 @@ html {
       object-fit: cover;
     }
   }
+
+  #project-1-modal, #project-2-modal  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: .1s;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-track-color: $primary-color;
+
+    &:target {
+      pointer-events: all;
+      opacity: 1;
+    }
+
+    .project-1-content, .project-2-content {
+      margin: 6em auto;
+      max-width: 900px;
+      padding: 0 2em;
+    } 
+
+    a.modal-close::before {
+      content: "x";
+      font-family: $secondary-font;
+      font-size: 4em;
+      position: fixed;
+      right: 2%;
+      top: 2%;
+    }
+  }
 }
 
 .red-bar-top,
@@ -161,7 +202,7 @@ html {
   width: 100%;
   height: 30px;
   background-color: $primary-color;
-  z-index: 10;
+  z-index: 20;
 }
 
 .red-bar-bottom {
@@ -193,6 +234,12 @@ h3 {
 
 a {
   color: $primary-color;
+  transition: .5s;
+
+  &:hover {
+    letter-spacing: .7px;
+    transition: .3s;
+  }
 }
 
 p {
@@ -200,18 +247,9 @@ p {
   color: rgb(78, 78, 78);
 }
 
-/* .project-title {
-  background-color: rgba(255, 64, 77, 0.70);
-  height: 100%;
-  position: relative;
-  top: -101%;
-  padding: 2em;
-  
+strong {
+  color: black;
 }
-
-.project-title:hover {
-  opacity: 1;
-} */
 
 .project-title-overlay {
   position: absolute;
@@ -224,10 +262,10 @@ p {
   height: 100%;
   transition: 0.3s;
   opacity: 0;
-}
 
-figure:hover .project-title-overlay {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .project-title-overlay-text {

@@ -1,153 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raquel Martínez</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link
-   href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono&display=swap"
-   rel="stylesheet"
-  />
- </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono&display=swap"
+    rel="stylesheet" />
+</head>
 
- <body>
+<body>
   <div class="red-bar-top"></div>
 
   <div class="container">
-   <!------------------ Header/Sidebar ------------------>
+    <!------------------ HEADER/SIDEBAR ------------------>
 
-   <div class="header-wrapper">
-    <div class="header">
-     <img src="img/icon.png" alt="Icono de Raquel" />
-     <h1>Raquel Martínez</h1>
-     <h3>Diseñadora gráfica</h3>
+    <div class="header-wrapper">
+      <div class="header">
+        <img src="img/icon.png" alt="Icono de Raquel" />
+        <h1>Raquel Martínez</h1>
+        <h3>Diseñadora gráfica</h3>
 
-     <nav>
-      <ul>
-       <li>Mis trabajos</li>
-       <li><a href="sobre-mi.html">Sobre mí</a></li>
-      </ul>
-     </nav>
+        <nav>
+          <ul>
+            <li>Mis trabajos</li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-   </div>
 
-   <!------------------ Main ------------------>
+    <!------------------ MAIN ------------------>
 
-   <div class="main">
-    <h2>Mis trabajos</h2>
+    <div class="main">
+      <h2>Mis trabajos</h2>
 
-    <div class="grid-gallery">
+      <!------------------ GALLERY ------------------>
 
-      <figure class="gallery__img--1">
-        <img src="img/thumbnails/thumb-img1.png" alt="" />
-        <a href=""><div class="project-title-overlay">
-         <p class="project-title-overlay-text">Tarjeta de visita</p>
-        </div></a>
-       </figure>
+      <div class="grid-gallery">
 
-     <figure class="gallery__img--2">
-      <img src="img/thumbnails/thumb-img2.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Gráficas para RRSS</p>
-      </div></a>
-     </figure>
+        <!------------------ IMG 1 ------------------>
 
-     <figure class="gallery__img--3">
-      <img src="img/thumbnails/thumb-img3.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Gráficas Islandia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--1">
+          <img src="img/thumbnails/thumb-img1.png" alt="" />
+          <a href="#project-1-modal">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Tarjeta de visita</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--4">
-      <img src="img/thumbnails/thumb-img4.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Gráficas para RRSS</p>
-      </div></a>
-     </figure>
+        <div id="project-1-modal">
+          <div class="project-1-content">
+            <a href="#" class="modal-close"></a>
+            <h1>Tarjeta de visita</h1>
+            <p>
+              <img src="img/projects/p1-img1.png" alt="">
+              <img src="img/projects/p1-img2.png" alt="">
+              <img src="img/projects/p1-img3.png" alt="">
+              <img src="img/projects/p1-img3.png" alt="">
+              Hello.
+            </p>
+          </div>
+        </div>
 
-     <figure class="gallery__img--5">
-      <img src="img/thumbnails/thumb-img5.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <!------------------ IMG 2 ------------------>
 
-     <figure class="gallery__img--6">
-      <img src="img/thumbnails/thumb-img6.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--2">
+          <img src="img/thumbnails/thumb-img2.png" alt="" />
+          <a href="#project-2-modal">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Gráficas para RRSS</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--7">
-      <img src="img/thumbnails/thumb-img7.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <div id="project-2-modal">
+          <div class="project-2-content">
+            <a href="#" class="modal-close"></a>
+            <h1>Gráficas para RRSS</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fuga
+              quo soluta reprehenderit quasi veritatis dolores unde vitae vero animi
+              cum, doloribus similique delectus tenetur! Laboriosam vero deserunt
+              dolorem itaque. 
+            </p>
+          </div>
+        </div>
 
-     <figure class="gallery__img--8">
-      <img src="img/thumbnails/thumb-img8.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <!------------------ IMG 3 ------------------>
 
-     <figure class="gallery__img--9">
-      <img src="img/thumbnails/thumb-img9.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--3">
+          <img src="img/thumbnails/thumb-img3.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Gráficas Islandia</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--10">
-      <img src="img/thumbnails/thumb-img10.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--4">
+          <img src="img/thumbnails/thumb-img4.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Gráficas para RRSS</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--11">
-      <img src="img/thumbnails/thumb-img11.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--5">
+          <img src="img/thumbnails/thumb-img5.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--12">
-      <img src="img/thumbnails/thumb-img12.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--6">
+          <img src="img/thumbnails/thumb-img6.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--13">
-      <img src="img/thumbnails/thumb-img13.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--7">
+          <img src="img/thumbnails/thumb-img7.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--14">
-      <img src="img/thumbnails/thumb-img14.jpg" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--8">
+          <img src="img/thumbnails/thumb-img8.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
 
-     <figure class="gallery__img--15">
-      <img src="img/thumbnails/thumb-img15.png" alt="" />
-      <a href=""><div class="project-title-overlay">
-       <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
-      </div></a>
-     </figure>
+        <figure class="gallery__img--9">
+          <img src="img/thumbnails/thumb-img9.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
 
+        <figure class="gallery__img--10">
+          <img src="img/thumbnails/thumb-img10.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery__img--11">
+          <img src="img/thumbnails/thumb-img11.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery__img--12">
+          <img src="img/thumbnails/thumb-img12.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery__img--13">
+          <img src="img/thumbnails/thumb-img13.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery__img--14">
+          <img src="img/thumbnails/thumb-img14.jpg" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery__img--15">
+          <img src="img/thumbnails/thumb-img15.png" alt="" />
+          <a href="">
+            <div class="project-title-overlay">
+              <p class="project-title-overlay-text">Cartel de película Lady Ligeia</p>
+            </div>
+          </a>
+        </figure>
+      </div>
     </div>
-   </div>
   </div>
 
   <div class="red-bar-bottom"></div>
- </body>
+</body>
+
 </html>
