@@ -15,10 +15,6 @@
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,42 +28,49 @@ html {
           justify-content: center;
 }
 
-.container .header-wrapper {
+.header-wrapper {
   width: 261px;
   margin-right: 9%;
   padding: 0 2em;
 }
 
-.container .header {
+.header {
   text-align: center;
   position: fixed;
 }
 
-.container .header img {
+.header img {
   margin-bottom: 2em;
   max-width: 200px;
 }
 
-.container .header nav {
+nav {
   display: block;
   text-align: left;
   margin-top: 6em;
 }
 
-.container .header nav li {
+nav li {
   list-style: none;
   font-family: "Space Mono", monospace;
 }
 
-.container .main {
+.main {
   width: 45%;
 }
 
-.container .main figure {
+.main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+figure {
   position: relative;
 }
 
-.container .main .grid-gallery {
+.grid-gallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[11];
@@ -78,7 +81,7 @@ html {
   margin-bottom: 200px;
 }
 
-.container .main .grid-gallery .gallery__img--1 {
+.grid-gallery .gallery__img--1 {
   -ms-grid-column: span 6;
       grid-column-start: span 6;
   -webkit-box-ordinal-group: 2;
@@ -86,7 +89,7 @@ html {
           order: 1;
 }
 
-.container .main .grid-gallery .gallery__img--2 {
+.grid-gallery .gallery__img--2 {
   -ms-grid-column: span 5;
       grid-column-start: span 5;
   -webkit-box-ordinal-group: 3;
@@ -94,7 +97,7 @@ html {
           order: 2;
 }
 
-.container .main .grid-gallery .gallery__img--3 {
+.grid-gallery .gallery__img--3 {
   -ms-grid-column: span 5;
       grid-column-start: span 5;
   -webkit-box-ordinal-group: 4;
@@ -102,7 +105,7 @@ html {
           order: 3;
 }
 
-.container .main .grid-gallery .gallery__img--4 {
+.grid-gallery .gallery__img--4 {
   -ms-grid-column: span 6;
       grid-column-start: span 6;
   -webkit-box-ordinal-group: 5;
@@ -110,7 +113,7 @@ html {
           order: 4;
 }
 
-.container .main .grid-gallery .gallery__img--5 {
+.grid-gallery .gallery__img--5 {
   -ms-grid-column: span 11;
       grid-column-start: span 11;
   -webkit-box-ordinal-group: 6;
@@ -118,7 +121,7 @@ html {
           order: 5;
 }
 
-.container .main .grid-gallery .gallery__img--6 {
+.grid-gallery .gallery__img--6 {
   -ms-grid-column: span 4;
       grid-column-start: span 4;
   -webkit-box-ordinal-group: 7;
@@ -126,7 +129,7 @@ html {
           order: 6;
 }
 
-.container .main .grid-gallery .gallery__img--9 {
+.grid-gallery .gallery__img--9 {
   -ms-grid-column: span 7;
       grid-column-start: span 7;
   -webkit-box-ordinal-group: 8;
@@ -134,7 +137,7 @@ html {
           order: 7;
 }
 
-.container .main .grid-gallery .gallery__img--10 {
+.grid-gallery .gallery__img--10 {
   -ms-grid-column: span 7;
       grid-column-start: span 7;
   -webkit-box-ordinal-group: 9;
@@ -142,7 +145,7 @@ html {
           order: 8;
 }
 
-.container .main .grid-gallery .gallery__img--7 {
+.grid-gallery .gallery__img--7 {
   -ms-grid-column: span 4;
       grid-column-start: span 4;
   -webkit-box-ordinal-group: 10;
@@ -150,7 +153,7 @@ html {
           order: 9;
 }
 
-.container .main .grid-gallery .gallery__img--8 {
+.grid-gallery .gallery__img--8 {
   -ms-grid-column: span 4;
       grid-column-start: span 4;
   -webkit-box-ordinal-group: 11;
@@ -158,7 +161,7 @@ html {
           order: 10;
 }
 
-.container .main .grid-gallery .gallery__img--11 {
+.grid-gallery .gallery__img--11 {
   -ms-grid-column: span 6;
       grid-column-start: span 6;
   -webkit-box-ordinal-group: 14;
@@ -166,7 +169,7 @@ html {
           order: 13;
 }
 
-.container .main .grid-gallery .gallery__img--12 {
+.grid-gallery .gallery__img--12 {
   -ms-grid-column: span 5;
       grid-column-start: span 5;
   -webkit-box-ordinal-group: 13;
@@ -174,7 +177,7 @@ html {
           order: 12;
 }
 
-.container .main .grid-gallery .gallery__img--13 {
+.grid-gallery .gallery__img--13 {
   -ms-grid-column: span 7;
       grid-column-start: span 7;
   -webkit-box-ordinal-group: 12;
@@ -182,7 +185,7 @@ html {
           order: 11;
 }
 
-.container .main .grid-gallery .gallery__img--14 {
+.grid-gallery .gallery__img--14 {
   -ms-grid-column: span 5;
       grid-column-start: span 5;
   -webkit-box-ordinal-group: 15;
@@ -190,7 +193,7 @@ html {
           order: 14;
 }
 
-.container .main .grid-gallery .gallery__img--15 {
+.grid-gallery .gallery__img--15 {
   -ms-grid-column: span 11;
       grid-column-start: span 11;
   -webkit-box-ordinal-group: 16;
@@ -198,14 +201,7 @@ html {
           order: 15;
 }
 
-.container .main img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.container #project-1-modal, .container #project-2-modal {
+#project-1-modal, #project-2-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -222,18 +218,18 @@ html {
   scrollbar-track-color: #ff404e;
 }
 
-.container #project-1-modal:target, .container #project-2-modal:target {
+#project-1-modal:target, #project-2-modal:target {
   pointer-events: all;
   opacity: 1;
 }
 
-.container #project-1-modal .project-1-content, .container #project-1-modal .project-2-content, .container #project-2-modal .project-1-content, .container #project-2-modal .project-2-content {
+.project-1-content, .project-2-content {
   margin: 6em auto;
   max-width: 900px;
   padding: 0 2em;
 }
 
-.container #project-1-modal a.modal-close::before, .container #project-2-modal a.modal-close::before {
+a.modal-close::before {
   content: "x";
   font-family: "Space Mono", monospace;
   font-size: 4em;
@@ -282,12 +278,6 @@ a {
   color: #ff404e;
   -webkit-transition: .5s;
   transition: .5s;
-}
-
-a:hover {
-  letter-spacing: .7px;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 p {
