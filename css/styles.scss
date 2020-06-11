@@ -1,8 +1,6 @@
 $primary-color: #ff404e;
-$primary-font: "Poppins",
-sans-serif;
-$secondary-font: "Space Mono",
-monospace;
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Space Mono", monospace;
 
 * {
   margin: 0;
@@ -18,7 +16,7 @@ monospace;
 .container {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 15%;
   justify-content: center;
@@ -36,11 +34,10 @@ monospace;
   text-align: center;
   position: fixed;
 
-  img {
+  .icon-raquel {
     margin-bottom: 2em;
     max-width: 200px;
   }
-
 }
 
 nav {
@@ -58,13 +55,6 @@ nav {
 
 .main {
   width: 45%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
 }
 
 figure {
@@ -73,92 +63,190 @@ figure {
 
 //  --------------------- GALLERY ---------------------
 
-.grid-gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: auto;
   grid-gap: 15px;
   margin-bottom: 200px;
 
-  .gallery__img--1 {
+  .gallery__item--1 {
     grid-column-start: span 6;
     order: 1;
   }
 
-  .gallery__img--2 {
+  .gallery__item--2 {
     grid-column-start: span 5;
     order: 2;
   }
 
-  .gallery__img--3 {
+  .gallery__item--3 {
     grid-column-start: span 5;
     order: 3;
   }
 
-  .gallery__img--4 {
+  .gallery__item--4 {
     grid-column-start: span 6;
     order: 4;
   }
 
-  .gallery__img--5 {
+  .gallery__item--5 {
     grid-column-start: span 11;
     order: 5;
   }
 
-  .gallery__img--6 {
+  .gallery__item--6 {
     grid-column-start: span 4;
     order: 6;
   }
 
-  .gallery__img--9 {
+  .gallery__item--9 {
     grid-column-start: span 7;
     order: 7;
   }
 
-  .gallery__img--10 {
+  .gallery__item--10 {
     grid-column-start: span 7;
     order: 8;
   }
 
-  .gallery__img--7 {
+  .gallery__item--7 {
     grid-column-start: span 4;
     order: 9;
   }
 
-  .gallery__img--8 {
+  .gallery__item--8 {
     grid-column-start: span 4;
     order: 10;
   }
 
-  .gallery__img--11 {
+  .gallery__item--11 {
     grid-column-start: span 6;
     order: 13;
   }
 
-  .gallery__img--12 {
+  .gallery__item--12 {
     grid-column-start: span 5;
     order: 12;
   }
 
-  .gallery__img--13 {
+  .gallery__item--13 {
     grid-column-start: span 7;
     order: 11;
   }
 
-  .gallery__img--14 {
+  .gallery__item--14 {
     grid-column-start: span 5;
     order: 14;
   }
 
-  .gallery__img--15 {
+  .gallery__item--15 {
     grid-column-start: span 11;
     order: 15;
   }
 }
 
-//  --------------------- END GALLERY ---------------------
+.gallery__item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(255, 64, 77, 0.9);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  cursor: pointer;
 
-#project-1-modal, #project-2-modal  {
+  &:after {
+    content: url(../img/icon-magnifying.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.gallery__item-caption {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  font-family: $secondary-font;
+  color: white;
+  font-size: 1em;
+}
+
+.gallery__modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 5em;
+  overflow-y: scroll;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.gallery__modal-content {
+  max-width: 700px;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+figure img,
+.gallery__modal-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-close {
+  position: fixed;
+  height: 4em;
+  left: calc(100% - 6.5em);
+  top: 3em;
+  cursor: pointer;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+//  --------------------- MODAL ---------------------
+
+/* #project-1-modal, #project-2-modal  {
   position: fixed;
   top: 0;
   left: 0;
@@ -167,16 +255,12 @@ figure {
   width: 100%;
   height: 100vh;
   pointer-events: none;
-  opacity: 0;
   transition: .1s;
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-track-color: $primary-color;
-
-  &:target {
-    pointer-events: all;
-    opacity: 1;
-  }
+  visibility: hidden;
+  opacity: 0;
 }
 
 .project-1-content, .project-2-content {
@@ -193,6 +277,11 @@ a.modal-close::before {
   right: 2%;
   top: 2%;
 }
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+} */
 
 .red-bar-top,
 .red-bar-bottom {
@@ -232,7 +321,7 @@ h3 {
 
 a {
   color: $primary-color;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 p {
@@ -244,35 +333,8 @@ strong {
   color: black;
 }
 
-.project-title-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: rgba(255, 64, 77, 0.9);
-  width: 100%;
-  height: 100%;
-  transition: 0.3s;
-  opacity: 0;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.project-title-overlay-text {
-  position: absolute;
-  bottom: 0;
-  padding: 1em;
-  font-family: $secondary-font;
-  color: white;
-  font-size: 1.2em;
-}
-
 @media screen and (max-width: 1200px) {
   .main {
     width: 60%;
   }
-
 }
