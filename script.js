@@ -9,19 +9,19 @@ gallery.addEventListener("click", (e) => {
 
  const modalOpen = function () {
   modal.classList.add("is-open");
-  modal.style.animation = "modalIn 300ms forwards";
+  /* modal.style.animation = "modalIn 300ms forwards"; */
   document.body.style.overflowY = "hidden";
  };
 
  const modalClose = function () {
   document.body.style.overflowY = "scroll";
   modal.classList.remove("is-open");
-  modal.removeEventListener("animationend", modalClose);
+  modal.removeEventListener("click", modalClose);
  };
 
  closeButton.addEventListener("click", function () {
-  modal.style.animation = "modalOut 300ms forwards";
-  modal.addEventListener("animationend", modalClose);
+  // modal.style.animation = "modalOut 300ms forwards";
+  modal.addEventListener("click", modalClose);
  });
 
  modalOpen();
