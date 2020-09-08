@@ -27,15 +27,16 @@
 
       <nav class="nav">
         <ul>
-          <li class ="link-mis-trabajos">Mis trabajos</li>
-          <li class="link-sobre-mi"><a href="#">Sobre mí</a></li>
+          <li class="li-mis-trabajos">Mis trabajos</li>
+          <!-- <li class="li-sobre-mi"><a href="javascript:void(0)">Sobre mí</a></li> -->
+          <li class="li-sobre-mi"><button class="nav-button">Sobre mí</button></li>
         </ul>
       </nav>
 
       <!------------------ MAIN ------------------>
 
       <div class="main">
-        <div id="mis-trabajos">
+        <section id="mis-trabajos">
           <h2>Mis trabajos</h2>
 
           <!------------------ GALLERY ------------------>
@@ -46,30 +47,28 @@
 
             <figure class="gallery__item--1">
               <img src="img/thumbnails/thumb-img1.png" alt="" />
-              <div class="gallery__item-overlay">
+              <div class="gallery__item-overlay" tabindex="0">
                 <figcaption class="gallery__item-caption">Tarjeta de visita</figcaption>
               </div>
               </a>
             </figure>
 
             <div class="gallery__modal">
-              <img class="icon-close" src="img/icon-close.svg" alt="" />
+              <img class="icon-close" src="img/icon-close.svg" tabindex="0" alt="close button" />
               <div class="gallery__modal-content">
                 <h1>Tarjeta de visita</h1>
-                <p>
-                  <img loading="lazy" src="img/projects/p1-img1.png" alt="">
-                  <p>Mi tarjeta de visita a partir de la cual basé el estilo de mi branding personal.</p>
-                  <img loading="lazy" src="img/projects/p1-img2.png" alt="">
-                  <img loading="lazy" src="img/projects/p1-img3.png" alt="">
-                  <img loading="lazy" src="img/projects/p1-img4.png" alt="">
-                </p>
+                <img loading="lazy" src="img/projects/p1-img1.jpg" alt="">
+                <p>Mi tarjeta de visita a partir de la cual basé el estilo de mi branding personal.</p>
+                <img loading="lazy" src="img/projects/p1-img2.jpg" alt="">
+                <img loading="lazy" src="img/projects/p1-img3.jpg" alt="">
+                <img loading="lazy" src="img/projects/p1-img4.jpg" alt="">
               </div>
             </div>
 
             <!------------------ GALLERY ITEM 2 ------------------>
 
             <figure class="gallery__item--2">
-              <img src="img/thumbnails/thumb-img2.png" alt="" />
+              <img src="img/projects/p2-img1.jpg" alt="" />
               <div class="gallery__item-overlay">
                 <figcaption class="gallery__item-caption">Gráficas para RRSS</figcaption>
               </div>
@@ -80,8 +79,14 @@
               <img class="icon-close" src="img/icon-close.svg" alt="" />
               <div class="gallery__modal-content">
                 <h1>Gráficas para RRSS</h1>
-                <img loading="lazy" src="img/projects/p2-img1.png" alt="">
-                <p>Un set de gráficas para las redes sociales de una marca de ropa ficticia.</p>
+                <img loading="lazy" src="img/projects/p2-img1.jpg" alt="">
+                <p>Un set de gráficas para las redes sociales de lo que sería una marca de ropa.</p>
+                <p>Fotografías de <a href="https://www.pexels.com/@postiglioni" target="_blank">Nicolas Postiglioni</a>
+                  y <a href="https://www.pexels.com/@eliasdecarvalho">Elias de Caravalho</a>.</p>
+                <img loading="lazy" src="img/projects/p2-img2.jpg" alt="">
+                <img loading="lazy" src="img/projects/p2-img3.jpg" alt="">
+                <img loading="lazy" src="img/projects/p2-img4.jpg" alt="">
+                <img loading="lazy" src="img/projects/p2-img5.jpg" alt="">
               </div>
             </div>
 
@@ -260,10 +265,9 @@
             <!------------------ GALLERY ITEM 12 ------------------>
 
             <figure class="gallery__item--12">
-              <img src="img/thumbnails/thumb-img12.png" alt="" />
+              <img src="img/projects/p12-img1b.jpg" alt="" />
               <div class="gallery__item-overlay">
-                <figcaption class="gallery__item-caption">Horario Salón del Cómic y Manga Castilla y León - Valladolid
-                </figcaption>
+                <figcaption class="gallery__item-caption">Horario Salón del Cómic y Manga Castilla y León - Valladolid</figcaption>
               </div>
               </a>
             </figure>
@@ -271,9 +275,11 @@
             <div class="gallery__modal">
               <img class="icon-close" src="img/icon-close.svg" alt="" />
               <div class="gallery__modal-content">
-                <h1>Gráfica firma de autores 37 Comic Barcelona</h1>
-                <img loading="lazy" src="img/projects/p2-img1.png" alt="">
-                <p>Realizado en Norma Editorial.</p>
+                <h1>Horario de firmas Salón del Cómic y Manga Castilla y León - Valladolid</h1>
+                <img loading="lazy" src="img/projects/p12-img1b.jpg" alt="">
+                <p>Horario para cartel de formato A2 y gráfica para RRSS. Realizado en Norma Editorial.</p>
+                <img loading="lazy" src="img/projects/p12-img2.jpg" alt="">
+                <img loading="lazy" src="img/projects/p12-img3.jpg" alt="">
               </div>
             </div>
 
@@ -337,41 +343,45 @@
             </div>
 
           </div>
-        </div>
+        </section>
 
-        <div id="sobre-mi">
+      <!------------------ SOBRE MÍ ------------------>
+
+        <section id="sobre-mi">
           <h2>¡Hola, soy Raquel!</h2>
 
-        <p>
-          Yo soy aquella que siempre quería encargarse de diseñar los PowerPoints de
-          los trabajos escolares en grupo. La que se hacía fondos de pantalla en
-          Photoshop con sus personajes favoritos para poder lucirlos orgullosamente
-          en su ordenador. La que con 10 años se creaba páginas web gratuitas sobre
-          su serie preferida y con lo que más disfrutaba era creando todos los
-          gráficos. Me ha gustado el diseño gráfico desde antes de saber que el
-          concepto en sí existía, y naturalmente acabé estudiando para poder
-          dedicarme a ello.
-        </p>
-        <br />
+          <p>
+            Yo soy aquella que siempre quería encargarse de diseñar los PowerPoints de
+            los trabajos escolares en grupo. La que se hacía fondos de pantalla en
+            Photoshop con sus personajes favoritos para poder lucirlos orgullosamente
+            en su ordenador. La que con 10 años se creaba páginas web gratuitas sobre
+            su serie preferida y con lo que más disfrutaba era creando todos los
+            gráficos. Me ha gustado el diseño gráfico desde antes de saber que el
+            concepto en sí existía, y naturalmente acabé estudiando para poder
+            dedicarme a ello.
+          </p>
+          <br />
 
-        <p>
-          Otros de mis intereses son el desarrollo web front-end (¡esta página la he
-          creado desde cero!) y el modelaje 3D, Pero, sin duda, mi mayor hobby de
-          toda la vida ha sido y sigue siendo dibujar.
-        </p>
-        <br />
+          <p>
+            Otros de mis intereses son el desarrollo web front-end (¡esta página la he
+            creado desde cero!) y el modelaje 3D, Pero, sin duda, mi mayor hobby de
+            toda la vida ha sido y sigue siendo dibujar.
+          </p>
+          <br />
 
-        <p>
-          <strong>Programas que manejo:</strong><br />
-          Photoshop / InDesign / Illustrator / After Effects / Premiere / XD
-          <br /><br />
-        </p>
+          <p>
+            <strong>Programas que manejo:</strong><br />
+            Photoshop / InDesign / Illustrator / After Effects / Premiere / XD
+            <br /><br />
+          </p>
 
-        <p>
-          <strong>Conocimientos de desarrollo web:</strong><br />
-          HTML / CSS / JS
-        </p>
-        </div>
+          <p>
+            <strong>Conocimientos de desarrollo web:</strong><br />
+            HTML / CSS / JS
+          </p>
+        </section>
+
+
       </div>
     </div>
   </div>

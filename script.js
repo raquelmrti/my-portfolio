@@ -9,7 +9,6 @@ gallery.addEventListener("click", (e) => {
 
   const modalOpen = function () {
     modal.classList.add("is-open");
-    /* modal.style.animation = "modalIn 300ms forwards"; */
     document.body.style.overflowY = "hidden";
   };
 
@@ -19,53 +18,42 @@ gallery.addEventListener("click", (e) => {
     modal.removeEventListener("click", modalClose);
   };
 
-  closeButton.addEventListener("click", function () {
-    // modal.style.animation = "modalOut 300ms forwards";
-    modal.addEventListener("click", modalClose);
-  });
+  closeButton.addEventListener("click", modalClose);
+  closeButton.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      modalClose();
+    }
+  })
 
   modalOpen();
 
 });
 
-let linkSobreMi = document.querySelector(".link-sobre-mi");
-let linkMisTrabajos = document.querySelector(".link-mis-trabajos");
+const liSobreMi = document.querySelector(".li-sobre-mi");
+const liMisTrabajos = document.querySelector(".li-mis-trabajos");
+const sobreMi = document.querySelector("#sobre-mi");
+const misTrabajos = document.querySelector("#mis-trabajos");
 
-/* function changeLink() {
+const linkSobreMi = document.createElement("button");
+linkSobreMi.classList.add("nav-button");
+linkSobreMi.textContent = "Sobre mí";
 
-  let misTrabajos = document.querySelector("#mis-trabajos");
+const linkMisTrabajos = document.createElement("button");
+linkMisTrabajos.classList.add("nav-button");
+linkMisTrabajos.textContent = "Mis trabajos";
 
-  if (misTrabajos.style.display == "none") {
-    document.querySelector(".link-mis-trabajos").innerHTML="<a href=#>Mis trabajos</a>";
-    document.querySelector(".link-sobre-mi").innerHTML="Sobre mí";
-  }
-
-  else {
-    document.querySelector(".link-sobre-mi").innterHTML="prueba";
-    document.querySelector(".link-mis-trabajos").innerHTML="Mis trabajos";
-  }
-} */
-
-function addLinkMisTrabajos() {
-  linkSobreMi.innerHTML="Sobre mí";
-  linkMisTrabajos.innerHTML="<a href=#>Mis trabajos</a>"
-}
-
-function addLinkSobreMi() {
-  linkSobreMi.innerHTML="<a href=#>Sobre mí</a>";
-  linkMisTrabajos.innerHTML="Mis trabajos"
-}
-
-linkSobreMi.addEventListener("click", function () {
-  document.querySelector("#mis-trabajos").style.display = "none";
-  document.querySelector("#sobre-mi").style.display = "block";
-
-  addLinkMisTrabajos();
+liSobreMi.addEventListener("click", () => {
+  misTrabajos.style.display = "none";
+  sobreMi.style.display = "block";
+  liSobreMi.textContent = "Sobre mí";
+  liMisTrabajos.innerHTML = "";
+  liMisTrabajos.appendChild(linkMisTrabajos);
 });
 
-linkMisTrabajos.addEventListener("click", function () {
-  document.querySelector("#mis-trabajos").style.display = "block";
-  document.querySelector("#sobre-mi").style.display = "none";
-
-  addLinkSobreMi();
+liMisTrabajos.addEventListener("click", () => {
+  misTrabajos.style.display = "block";
+  sobreMi.style.display = "none";
+  liMisTrabajos.textContent = "Mis trabajos";
+  liSobreMi.innerHTML = "";
+  liSobreMi.appendChild(linkSobreMi);
 });
