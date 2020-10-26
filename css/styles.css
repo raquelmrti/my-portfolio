@@ -83,7 +83,8 @@ figure {
   display: none;
 }
 
-#mis-trabajos, #sobre-mi {
+#mis-trabajos,
+#sobre-mi {
   -webkit-animation: fade-in .2s ease-out;
           animation: fade-in .2s ease-out;
 }
@@ -243,7 +244,7 @@ figure {
           transform: translate(-50%, -50%);
 }
 
-.gallery__item-overlay:hover, .gallery__item-overlay:focus-visible {
+.gallery__item-overlay:hover {
   opacity: 1;
 }
 
@@ -318,8 +319,8 @@ figure img,
   z-index: 20;
 }
 
-.icon-close:focus {
-  border: 3px red solid;
+.icon-close:focus:not(:focus-visible) {
+  outline: none;
 }
 
 #sobre-mi p:last-of-type {
@@ -347,6 +348,13 @@ h3 {
 
 h1 {
   font-size: 1.8em;
+}
+
+.name {
+  line-height: 1em;
+  max-width: 241px;
+  margin-bottom: .6em;
+  text-align: left;
 }
 
 h2 {
@@ -501,6 +509,10 @@ strong {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .name {
+    text-align: center;
+    max-width: initial;
+  }
   .main {
     width: calc(130px + 65%);
     margin: 0 auto;
@@ -525,7 +537,6 @@ strong {
     height: 2em;
     left: calc(100% - 4.5em);
     top: 0.9em;
-    cursor: pointer;
   }
   .red-bar-top {
     position: initial;
